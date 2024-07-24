@@ -20,8 +20,8 @@ class MyButton extends StatelessWidget {
           ),
           width: 200,
           height: 200,
-          padding: const EdgeInsets.all(50),
-          child: const Center(child: Text('TAP ')),
+          padding: const EdgeInsets.all(25),
+          child: const Center(child: Text('TAP')),
         ));
   }
 }

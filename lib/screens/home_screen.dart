@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:theme_app/components/box.dart';
 import 'package:theme_app/components/button.dart';
+import 'package:theme_app/theme/theme_provider.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -8,13 +10,16 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       body: Center(
         child: MyBox(
-          color: const Color.fromARGB(255, 191, 152, 152),
+          color: Theme.of(context).colorScheme.primary,
           child: MyButton(
-            color: Colors.black,
-            onTap: () {},
+            // the small recrangle with the Text
+            color: Theme.of(context).colorScheme.secondary,
+            onTap: () {
+              Provider.of<ThemeProvider>(context, listen: false).toggledTheme();
+            },
           ),
         ),
       ),
