@@ -18,6 +18,8 @@ class HomeScreen extends StatelessWidget {
             // the small recrangle with the Text
             color: Theme.of(context).colorScheme.secondary,
             onTap: () {
+              // you must to make listen false to prevent the widget
+              // rebuild when the provider changes and returen to light mode.
               Provider.of<ThemeProvider>(context, listen: false).toggledTheme();
             },
           ),

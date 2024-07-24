@@ -17,7 +17,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  about deactivating specific lint
+
  
   flutter_lints: ^3.0.0
 
